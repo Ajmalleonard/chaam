@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:chaam/Screens/chat.dart';
+import 'package:chaam/Screens/select_user_screen.dart';
 import 'package:chaam/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
@@ -50,9 +51,10 @@ class _AppState extends State<App> {
       initialRoute: '/selected',
       getPages: [
         GetPage(
-          name: '/selected',
+          name: '/SelectUser',
           page: () => AppController(onTap: themeSwitcher),
         ),
+        GetPage(name: '/SelectUser', page: () => const SelectUser())
       ],
     );
   }
